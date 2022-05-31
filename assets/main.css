@@ -1,0 +1,266 @@
+/* Font Family */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  /* Colors */
+  --lightRed: hsl(356, 100%, 66%); /*(CTA text) */
+  --veryLightRed: hsl(355, 100%, 74%); /*(CTA hover background)*/
+  --veryDarkBlue: hsl(208, 49%, 24%); /*(headings)*/
+
+  --white: hsl(0, 0%, 100%); /*(text)*/
+  --grayishBlue: hsl(240, 2%, 79%); /*(footer text)*/
+  --veryDarkGrayishBlue: hsl(207, 13%, 34%); /*(body copy)*/
+  --veryDarkBlackBlue: hsl(240, 10%, 16%); /*(footer background)*/
+
+  /* Background gradient - Intro/CTA mobile nav: */
+
+  --veryLightRed: hsl(13, 100%, 72%);
+  --lightRed: hsl(353, 100%, 62%);
+
+  /* Background gradient - body: */
+
+  --veryDarkGrayBlue: hsl(237, 17%, 21%);
+  --veryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+
+  /* Fonts */
+  --primary-font: "Overpass", sans-serif;
+  --secondary-font: "Ubuntu", sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.88rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* Font Weight */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 400;
+  --font-semiBold: 600;
+  --font-bold: 600;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 3.3rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* Globals */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: var(--normal-font-size);
+  color: var(--white);
+  transition: 0.3s;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  font-weight: var(--font-bold);
+}
+
+a,
+a:visited,
+a:hover {
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Custom CSS */
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 3.7rem 2rem 1.4rem 2rem;
+  background: linear-gradient(to right, var(--veryLightRed), var(--lightRed));
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 0 6rem;
+}
+
+.hero__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 10.4rem;
+  z-index: 99;
+}
+
+.hero__bg {
+  position: absolute;
+  top: -7rem;
+  left: 53rem;
+  z-index: -1;
+}
+
+.hero__bg img {
+  transform: scale(5.5);
+  z-index: -1;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  margin-right: 4rem;
+}
+
+.nav__menu {
+  flex-grow: 1;
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__item {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.dropdown__menu {
+  display: none;
+}
+
+.nav__cta {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.signUp {
+  background-color: #fff;
+  padding: 0.8rem 2.5rem;
+  border-radius: 2rem;
+  color: var(--lightRed) !important;
+  font-weight: var(--font-bold);
+}
+
+.hero__content {
+  margin: 8.2rem 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.hero__title {
+  font-size: 59px;
+}
+
+.hero__description {
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.learnMore {
+  border: 1px solid #fff;
+}
+.startFree {
+  background-color: #fff;
+  color: var(--lightRed) !important;
+}
+
+.learnMore,
+.startFree {
+  border-radius: 2rem;
+  padding: 0.7rem 1.2rem;
+}
+
+/* Main section */
+
+.design {
+  display: flex;
+  flex-direction: column;
+  max-width: 1114px;
+  margin: 10rem auto 15rem auto;
+  position: relative;
+}
+
+.design__title {
+  font-size: 36px;
+  color: var(--veryDarkBlue);
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.design__content {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+}
+
+.design__item h3 {
+  color: var(--veryDarkBlue);
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.design__item p {
+  color: var(--veryDarkBlackBlue);
+}
+
+.design__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  flex-basis: 45.2%;
+  line-height: 1.7;
+}
+
+.design__img {
+  position: absolute;
+  top: -6rem;
+  right: -27.5rem;
+}
